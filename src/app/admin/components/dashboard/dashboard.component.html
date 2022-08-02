@@ -1,0 +1,20 @@
+<nav> 
+    <a routerLink="/signup">signup</a> | 
+    <a routerLink="/login">login</a> | 
+    <a routerLink="/page1">page1</a>
+</nav>
+<p>dashboard works!</p>
+
+
+<input  type="text" [(ngModel)]="postService.myname">
+
+<br>
+
+{{postService.myname}}
+
+<br>
+<pre>
+{{postService.posts | json}}
+</pre>
+
+<app-footer></app-footer>
