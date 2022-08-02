@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './admin/components/dashboard/dashboard.component';
+import { EditPostComponent } from './admin/components/edit-post/edit-post.component';
 import { Page1Component } from './admin/components/page1/page1.component';
 import { LoginComponent } from './auth/components/login/login.component';
 import { SignupComponent } from './auth/components/signup/signup.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'page1',
     component: Page1Component
+  },
+  {
+    path: 'post/edit/:postId',
+    component: EditPostComponent
   },
 
  

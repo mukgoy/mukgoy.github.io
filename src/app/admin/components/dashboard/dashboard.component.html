@@ -17,4 +17,23 @@
 {{postService.posts | json}}
 </pre>
 
+
+<table>
+    <tr>
+        <td>ID</td>
+        <td>title</td>
+        <td>Actions</td>
+    </tr>
+    <tr>
+        <td>{{postService.posts[0].id}}</td>
+        <td>{{postService.posts[0].title}}</td>
+        <td><a routerLink="/post/edit/{{postService.posts[0].id}}">EDIT</a></td>
+    </tr>
+    <tr>
+        <td>{{postService.posts[1].id}}</td>
+        <td>{{postService.posts[1].title}}</td>
+        <td><a routerLink="/post/edit/{{postService.posts[1].id}}">EDIT</a></td>
+    </tr>
+<table>
+
 <app-footer></app-footer>
