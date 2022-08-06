@@ -1,1 +1,19 @@
-<p>create works!</p>
+<div class="container mt-4">
+      <!-- <form> -->
+        <h1 class="h3 mb-3 fw-normal">Create Post</h1>
+    
+        <div class="form-floating">
+          <input type="text" class="form-control" id="Title" placeholder="Title" [(ngModel)]="title">
+          <label for="Title">Title</label>{{title}}
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="content" placeholder="content" [(ngModel)]="content">
+          <label for="content">Content</label>{{content}}
+        </div>
+
+        
+        <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="create()">Create</button>
+      <!-- </form> -->
+</div>
+
+<a class="w-100 btn btn-lg btn-primary" routerLink="/posts">show Posts</a>

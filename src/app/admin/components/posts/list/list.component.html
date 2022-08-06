@@ -185,7 +185,7 @@
                     <h1 class="h2">Posts</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group me-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Create</button>
+                            <a type="button" routerLink="/posts/create" class="btn btn-sm btn-outline-secondary">Create</a>
                         </div>
                     </div>
                 </div>
@@ -208,9 +208,8 @@
                                 <td>{{post.content}}</td>
                                 <td>{{post.date}}</td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <a type="button" routerLink="/posts/edit/{{post.id}}" class="btn btn-sm btn-outline-secondary">Edit</a>
                                     <button type="button" (click)="delete(post.id)" class="btn btn-sm btn-outline-secondary">Delete</button>
-
                                 </td>
                             </tr>
                         </tbody>
