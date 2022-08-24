@@ -9,4 +9,58 @@
   <app-root></app-root>
 <script src="runtime.8b1d892baee0b08c.js" type="module"></script><script src="polyfills.047b39a710d13c7a.js" type="module"></script><script src="main.df67755d66a3a315.js" type="module"></script>
 
+<script>
+  var bubbleVariables = {"jobId":14198109,"enabled":true,"orgId":147,"version":"4.2","chatButtonSetting":{"chatButtonBackgroundColor":"#4dc247","chatButtonImg":"assets/user-uploads/admin/chaticon.svg","chatButtonCtaText":"","chatButtonCtaTextColor":"#FFF","chatButtonBorderRadius":"25","chatButtonPadding":"5","chatButtonMarginLeft":20,"chatButtonMarginBottom":100,"chatButtonMarginRight":20,"chatButtonPosition":"right","couponCode":"Use code \"WELGUDUCHI10\" to get 10% off on your 1st order","defaultmsg":"Welcome to Guduchi Ayurveda - Happy to help","brandName":"Guduchi Ayurveda","brandImg":"https://cdn.shopify.com/s/files/1/0398/5955/2409/files/Guduchi_logo_500x.jpg","connectWhatsapp":true,"whatsappCtaText":"Chat on WhatsApp","stinkerMessage":"Need some help?","welcomeMessage":"Welcome to Guduchi, let us know how we can helpðŸ™","backgroundColor":"#259842","autoShow":false,"phoneNumber":"+919380372576","instaLink":"https://www.instagram.com/GuduchiAyurveda/","twLink":"","fbLink":"https://www.facebook.com/Guduchi","supportNo":"6363428787","phoneQ":"Please let us know your whatsapp number to connect","emailQ":"Please let me know your email address","supportEmail":"care@guduchiayurveda.com","youTube":"https://www.youtube.com/channel/UCPnEQ87tN73PY8yIHuLvIUw","messenger":"https://business.facebook.com/latest/inbox/messenger?asset_id=650351918358916&business_id=256219214903943&nav_ref=pages_classic_isolated_section_inbox_redirect&mailbox_id=650351918358916&selected_item_id=100044410722508","phoneCheckBox":true,"emailCheckBox":false,"liveChat":false,"onlineGreenDot":true,"productSearch":true,"orderStatus":true,"enabledOnMobileCheckBox":true,"brandingCheckBox":true,"couponCodeCheckBox":true,"myCartConsent":false,"triggerPopup":{"onLand":false,"onDelay":false,"delayValue":10,"onScroll":false,"scrollValue":10,"onExit":true},"slotMachine":{"onClick":false},"cornerPopup":{"onLand":true},"horizontalPopUp":{"onClick":false,"backgroundColor":"#000000","color":"#ffffff","padding":"11","top":"36","width":"100%","text":" Hurry up! 30% off sale end soon","timer":""},"chatBubble":{"backgroundColor":"transparent","imageType":"default","image":"https://storage.googleapis.com/public_document/static/chat/chatbubble/bubble22.svg","ripple":true,"rippleBackground":"red","text":"","textColor":"#000","textFont":"","textSize":"20","textMarginLeft":"","textMarginRight":"100","textMarginTop":"","textMarginBottom":"","textPaddingLeft":"","textPaddingRight":"","textPaddingTop":"","textPaddingBottom":"","imageMarginLeft":"","imageMarginRight":"","imageMarginTop":"5","imageMarginBottom":"5","imagePaddingLeft":"5","imagePaddingRight":"","imagePaddingTop":"","imagePaddingBottom":"","padding":"10","position":"","height":65,"width":65,"borderRadius":"50px"},"header":{"brandName":"Guduchi Ayurveda","brandNameColor":"#FFFFFF","brandNameSize":"20","brandNameFont":"Verdana","brandNameMarginTop":"","brandNameMarginBottom":"-5","brandNameMarginLeft":"","brandNameMarginRight":"","subTittleWanted":true,"subTittle":"Chat with us","subTittleColor":"#FFFFFF","subTittleSize":"15","subTittleFont":"","brandLogo":"https://istaticbucket.blob.core.windows.net/bot-uploads/LiveAgent.jpeg","brandLogoRadius":"","backgroundColor":"#156909","socialIcons":{"whatsapp":"","facebook":"","instagram":"dfdfsdfsdaf","twitter":"","phone":"","email":"","youtube":"","messenger":""}},"chatBody":{"backgroundColor":"#FFFFFF","userTextBackgroundColor":"#8f8f8f","brandTextBackgroundColor":"#999999","userTextColor":"#FFFFFF","botTextColor":"#FFFFFF","textFont":"Verdana","fontSize":"15","chatBubbleRadius":"10","MarginTop":"","MarginBottom":"","MarginLeft":"","MarginRight":"","welcomeMessage":"Hi, Do you want your kid to stand out from the crowd? Let's discuss the right programs for your Kid."},"chatFooter":{"sendButton":"#156909","placeholder":"Your Message Here","textMarginTop":"","textMarginBottom":"","textMarginLeft":"","textMarginRight":"","textSize":"","textColor":"","textFont":""},"triggerOnExit":false,"borderRadius":"25"},"flowId":1};
+		var channel
+		!function (t, e, s, n) {
+			var a = e.createElement("script");
+			a.async = 1,
+				a.src = "https://chat.intelliassist.co/assets/js/bundle.stage.js",
+				a.onload = function () {
+					channel = aibot.init(bubbleVariables)
+					console.log(channel.channel)
+				};
+			var i = e.getElementsByTagName("script")[0];
+			i.parentNode.insertBefore(a, i)
+		}(window, document);
+
+		var intelliassist = {
+			togglepop: function togglepop() {
+				console.log(channel.channel)
+				channel.channel.call({
+					method: "externalCall",
+					params: { method: "toggleChatBox" },
+					success: (res) => {
+						console.log({ res })
+					}
+				})
+			},
+			startflow: function startflow(flowId) {
+				console.log(channel.channel)
+				channel.channel.call({
+					method: "externalCall",
+					params: { method: "startLiveFlow",flowId:flowId },
+					success: (res) => {
+						console.log({ res })
+					}
+				})
+			}
+		}
+		if(bubbleVariables.chatButtonSetting.myCartConsent){
+			if(location.pathname == "/cart"){
+				var d1 = document.getElementsByTagName("h1");
+				d1[0].insertAdjacentHTML('afterend', `<div class="totals">
+				<div class="checkout-buyer-accepts-marketing-wrapper">
+				  
+					<input class="input-checkbox" checked data-email-marketing="true" data-backup="buyer_accepts_marketing" type="checkbox" value="1" name="checkout[buyer_accepts_marketing]" id="checkout_buyer_accepts_marketing">
+				  
+				  <label class="checkbox__label" for="checkout_buyer_accepts_marketing">
+					Whatsapp me with Order Updates.
+				  </label>
+				</div>
+				</div>`);
+			}
+		}
+		
+</script>
 </body></html>

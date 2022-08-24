@@ -203,7 +203,7 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let post of postService.posts">
-                                <td>{{post.id}}</td>
+                                <td>{{post.id | squarett}}</td>
                                 <td>{{post.title}}</td>
                                 <td>{{post.content}}</td>
                                 <td>{{post.date}}</td>

@@ -20,4 +20,7 @@ export class ListComponent implements OnInit {
     })
   }
 
+  convert(id:number){
+    return 'id--' + id
+  }
 }

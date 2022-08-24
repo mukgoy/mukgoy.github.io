@@ -1,0 +1,26 @@
+<div class="container mt-4">
+
+    
+    <form [formGroup]="form" (ngSubmit)="create()">
+      <h1 class="h3 mb-3 fw-normal">Create Post</h1>
+      <div class="form-floating"> 
+        <input type="text" class="form-control" id="Title" placeholder="Title" formControlName="title">
+        <span *ngIf="form.controls.title.status!=='VALID'">Invalid</span> | 
+        <span *ngIf="form.controls.title.errors && form.controls.title.errors['required']">required</span> | 
+        <span *ngIf="form.controls.title.errors && form.controls.title.errors['max']">max is 6</span>
+        <label for="Title">Title</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="content" placeholder="content" formControlName="content">
+        <span *ngIf="form.controls.content.status!=='VALID'">Invalid</span> | 
+        <span *ngIf="form.controls.content.errors && form.controls.content.errors['required']">required</span> | 
+        <span *ngIf="form.controls.content.errors && form.controls.content.errors['min']">min is 6</span>
+        <label for="content">Content</label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Create</button>
+    </form>
+
+
+</div>
+
+<a class="w-100 btn btn-lg btn-primary" routerLink="/posts">show Posts</a>
